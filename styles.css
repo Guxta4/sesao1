@@ -1,0 +1,91 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo com opacidade */
+body {
+    background: url('caminho/para/sua-imagem.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay escuro para legibilidade */
+    z-index: -1;
+}
+
+/* Estilo do Cabeçalho */
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #f0e68c;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Seção de Dicas e Guias */
+.dicas, .guias {
+    padding: 20px;
+    text-align: center;
+}
+
+.dicas h2, .guias h2 {
+    font-size: 1.8em;
+    color: #ffeb3b;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
